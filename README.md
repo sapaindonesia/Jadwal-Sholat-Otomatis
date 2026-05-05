@@ -1,2 +1,2 @@
-# Jadwal-Sholat-Otomatis
+Jadwal-Sholat-Otomatis
 Automatic Prayer Schedule
