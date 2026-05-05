@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Sholat Otomatis - Running Text & Peringatan Adzan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕌 Jadwal Sholat & Running Text Otomatis</h1>
+            <p id="location">Mencari lokasi...</p>
+            <form id="locationForm">
+                <label>Pilih Kota:</label>
+                <select id="citySelect">
+                    <option value="">-- Pilih Kota Indonesia --</option>
+                </select>
+                <button type="submit">🔄 Update Jadwal</button>
+            </form>
+            <button id="notifyBtn">Aktifkan Notifikasi Adzan/Iqomah</button>
+        </header>
+        
+        <div class="running-text-container">
+            <div id="runningText" class="running-text">
+                Selamat datang! Memuat jadwal sholat...
+            </div>
+        </div>
+        
+        <main>
+            <div class="prayer-times">
+                <h2>Jadwal Sholat Hari Ini</h2>
+                <div id="timesTable"></div>
+            </div>
+            
+            <div class="countdown">
+                <h3 id="nextPrayerTitle">Prayer Selanjutnya</h3>
+                <div id="countdownTimer" class="timer">00:00:00</div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Auto-update setiap menit | API: Aladhan.com</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+/* Previous CSS content intact, adding form styling */
+
+#locationForm {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#locationForm input {
+    padding: 10px 15px;
+    border: 2px solid rgba(0,212,170,0.3);
+    border-radius: 25px;
+    background: rgba(255,255,255,0.1);
+    color: #e0e0e0;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    min-width: 120px;
+}
+
+#locationForm input::placeholder {
+    color: #b0b0b0;
+}
+
+#locationForm input:focus {
+    outline: none;
+    border-color: #00d4aa;
+    box-shadow: 0 0 0 3px rgba(0,212,170,0.2);
+}
+
+#locationForm button {
+    background: linear-gradient(45deg, #00d4aa, #00a085);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,212,170,0.4);
+}
+
+#locationForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,212,170,0.6);
+}
+
+/* Rest of existing CSS remains the same - assuming full content preserved */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #00d4aa, #00a085);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+#location {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+}
+
+#notifyBtn {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+    margin-top: 10px;
+}
+
+#notifyBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255,107,107,0.6);
+}
+
+#notifyBtn.enabled {
+    background: linear-gradient(45deg, #00d4aa, #00a085);
+    box-shadow: 0 4px 15px rgba(0,212,170,0.4);
+}
+
+.running-text-container {
+    height: 60px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 30px;
+    margin: 20px 0;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    border: 2px solid rgba(0,212,170,0.3);
+}
+
+.running-text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00d4aa;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+    text-shadow: 0 0 10px rgba(0,212,170,0.8);
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    header h1 { font-size: 2rem; }
+    .running-text { font-size: 1.3rem; }
+    #locationForm {
+        flex-direction: column;
+        align-items: center;
+    }
+    #locationForm input {
+        width: 200px;
+    }
+}
+
+.prayer-times {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(0,212,170,0.2);
+}
+
+.prayer-times h2 {
+    color: #00d4aa;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.time-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.time-row:last-child {
+    border-bottom: none;
+}
+
+.time-label {
+    font-weight: bold;
+    color: #b0b0b0;
+}
+
+.time-value {
+    color: #00d4aa;
+    font-size: 1.1rem;
+}
+
+.countdown {
+    background: rgba(255,107,107,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255,107,107,0.3);
+}
+
+#nextPrayerTitle {
+    color: #ff6b6b;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.timer {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    text-shadow: 0 0 20px rgba(255,107,107,0.8);
+    font-family: 'Courier New', monospace;
+}
+
+footer {
+    text-align: center;
+    color: #808080;
+    font-size: 0.9rem;
+}
+
+.current {
+    background: rgba(0,212,170,0.3) !important;
+    border-color: #00d4aa !important;
+}
+
+.next {
+    background: rgba(255,107,107,0.3) !important;
+    border-color: #ff6b6b !important;
+}
